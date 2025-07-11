@@ -1,0 +1,6 @@
+logging:
+  level:
+    root: error          # Suppress logs from all other packages
+    org.example: warn   # Enable logging only for your package
+  pattern:
+    console: "%d{HH:mm:ss.SSS} - %msg%n"

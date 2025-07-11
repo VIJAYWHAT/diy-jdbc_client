@@ -1,6 +1,8 @@
 package org.example;
 
 import org.example.model.Movie;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,6 +17,9 @@ import java.sql.Statement;
 
 @SpringBootApplication
 public class Main {
+
+    private static final Logger LOG = LoggerFactory.getLogger(Main.class);
+
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }
@@ -26,7 +31,7 @@ public class Main {
 
             Movie createdMovie = save(dataSource, movie);
 
-            System.out.println("Saved movie: " + createdMovie.getId() + ", " + createdMovie.getTitle());
+            LOG.warn("Saved movie: {} , {}" , createdMovie.getId() , createdMovie.getTitle());
         };
     }
 
@@ -59,7 +64,9 @@ public class Main {
             }
 
         }
+
         return movie;
+
     }
 
 
