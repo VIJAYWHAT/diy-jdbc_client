@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.techatpark</groupId>
-	<artifactId>javapractice</artifactId>
+	<groupId>org.example</groupId>
+	<artifactId>jdbcclient</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Java Playground</name>
-	<description>Playground for Core Java</description>
+	<name>SQL Builder</name>
+	<description>SQL Builder for Core Java</description>
 
 	<properties>
-		<java.version>24</java.version>
+		<java.version>17</java.version>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>

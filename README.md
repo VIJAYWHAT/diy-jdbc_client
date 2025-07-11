@@ -1,2 +1,3 @@
-# diy-jdbc_client
-DIY JDBC Client Workshop
+# DIY JDBC Client
+
+Workshop

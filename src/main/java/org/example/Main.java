@@ -58,7 +58,6 @@ public class Main {
                 movie.setId(generatedKeys.getLong(1));
             }
 
-
         }
         return movie;
     }
