@@ -16,6 +16,10 @@ public class SqlBuilder {
         this.paramMappers = new ArrayList<>();
     }
 
+    private int getIndex() {
+        return this.paramMappers.size() + 1;
+    }
+
     public interface ParamMapper<T> {
         void mapParam(PreparedStatement preparedStatement) throws SQLException;
     }
