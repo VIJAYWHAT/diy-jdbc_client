@@ -7,6 +7,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
+import org.springframework.jdbc.support.KeyHolder;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -76,3 +78,47 @@ public class Main {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//KeyHolder keyHolder = new GeneratedKeyHolder();
+//
+//        jdbcClient.sql(sql)
+//                .param("title", movie.getTitle())
+//        .param("directedBy", movie.getDirectedBy())
+//        .update(keyHolder);
+//
+//Long generatedId = keyHolder.getKey().longValue();
