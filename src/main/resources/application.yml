@@ -1,6 +1,17 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
 logging:
   level:
     root: error          # Suppress logs from all other packages
-    org.example: warn   # Enable logging only for your package
+    org:
+      example: warn   # Enable logging only for your package
+#      hibernate:
+#        SQL: DEBUG
+#        type:
+#          descriptor:
+#            sql:
+#              BasicBinder: TRACE
   pattern:
     console: "%d{HH:mm:ss.SSS} - %msg%n"
