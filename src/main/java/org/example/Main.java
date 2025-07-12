@@ -50,6 +50,8 @@ public class Main {
 
         String sql = "INSERT INTO movie (title, directed_by) VALUE (?, ?)";
 
+        long generatedId =-1;
+
         try (Connection conn = dataSource.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
@@ -60,10 +62,12 @@ public class Main {
 
             ResultSet generatedKeys = stmt.getGeneratedKeys();
             if (generatedKeys.next()) {
-                movie.setId(generatedKeys.getLong(1));
+                generatedId = generatedKeys.getLong(1);
             }
 
         }
+
+        movie.setId(generatedId);
 
         return movie;
 
